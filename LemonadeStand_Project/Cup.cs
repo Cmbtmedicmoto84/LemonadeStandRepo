@@ -7,6 +7,7 @@ namespace LemonadeStand_Project
     class Cup : Item
     {
         // member variables (HAS A)
+        public int capacity;
 
         // constructor (SPAWNER)
         public Cup()
