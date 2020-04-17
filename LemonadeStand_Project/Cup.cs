@@ -15,5 +15,6 @@ namespace LemonadeStand_Project
         }
 
         // member methods (CAN DO)
+        // hold items for lemonade
     }
 }

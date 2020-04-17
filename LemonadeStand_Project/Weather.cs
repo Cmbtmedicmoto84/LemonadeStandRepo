@@ -4,18 +4,19 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class IceCube : Item
+    class Weather
     {
         // member variables (HAS A)
-        // melting point(time)
+        public string condition;
+        public double temperatureLevel;
+        private List<string> weatherConditions;
 
         // constructor (SPAWNER)
-        public IceCube()
+        public Weather()
         {
-            name = "ice cube";
+            
         }
 
         // member methods (CAN DO)
-        // melt
     }
 }

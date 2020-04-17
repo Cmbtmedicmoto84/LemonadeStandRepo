@@ -12,7 +12,7 @@ namespace LemonadeStand_Project
         // constructor (SPAWNER)
         static Item()
         {
-
+            string name = "Pitcher";
         }
 
         // member methods (CAN DO)

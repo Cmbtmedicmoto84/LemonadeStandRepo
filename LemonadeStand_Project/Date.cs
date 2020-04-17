@@ -4,18 +4,18 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class IceCube : Item
+    class Date
     {
         // member variables (HAS A)
-        // melting point(time)
+        public Weather weather;
+        public List<string> customers;
 
         // constructor (SPAWNER)
-        public IceCube()
+        public Date()
         {
-            name = "ice cube";
+
         }
 
         // member methods (CAN DO)
-        // melt
     }
 }
