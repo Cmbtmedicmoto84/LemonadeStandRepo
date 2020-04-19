@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class Wallet
+    public class Wallet
     {
         private double money;
 

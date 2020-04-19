@@ -4,7 +4,14 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class ForecastConditions
+    class ForecastConditions : Weather
     {
+        public string forecast;
+
+
+        public ForecastConditions(int tempVariableOne, int tempVariableTwo, string forecast)
+        {
+            
+        }
     }
 }

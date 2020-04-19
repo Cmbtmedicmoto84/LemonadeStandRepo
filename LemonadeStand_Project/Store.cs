@@ -4,13 +4,13 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class Store
+     public class Store
     {
         // member variables (HAS A)
-        private double pricePerLemon;
-        private double pricePerSugarCube;
-        private double pricePerIceCube;
-        private double pricePerCup;
+        protected double pricePerLemon;
+        protected double pricePerSugarCube;
+        protected double pricePerIceCube;
+        protected double pricePerCup;
 
         // constructor (SPAWNER)
         public Store()

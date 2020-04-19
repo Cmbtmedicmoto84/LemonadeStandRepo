@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class Weather
+    public class Weather
     {
         // member variables (HAS A)
         public int tempVariableOne;
@@ -74,7 +74,6 @@ namespace LemonadeStand_Project
             {
                 Console.ReadLine();
             }
-        }
-        
+        }   
     }
 }

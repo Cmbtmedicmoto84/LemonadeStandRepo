@@ -4,15 +4,21 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    abstract class Item
+    public class Item : Store
     {
         // member variables (HAS A)
-        public string name;
+        protected string name;
+        public Cup cup;
+        public Lemon lemon;
+        public IceCube icecube;
+        public SugarCube sugarcube;
+
+        // public int quantityToBuy;
 
         // constructor (SPAWNER)
-        static Item()
+        public Item()  // int quantityToBuy
         {
-            string name = "Pitcher";
+
         }
 
         // member methods (CAN DO)

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class Recipe
+    public class Recipe
     {
         // member variables (HAS A)
         public int amountOfLemons;

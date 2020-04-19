@@ -4,9 +4,10 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class Lemon : Item
+    public class Lemon : Item
     {
         // member variables (HAS A)
+        public string name;
 
         // constructor (SPAWNER)
         public Lemon()

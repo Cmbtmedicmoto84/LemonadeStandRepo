@@ -4,15 +4,16 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class Cup : Item
+    public class Cup : Item
     {
         // member variables (HAS A)
         public int capacity;
+        //public string name;
 
         // constructor (SPAWNER)
         public Cup()
         {
-            name = "cup";
+
         }
 
         // member methods (CAN DO)

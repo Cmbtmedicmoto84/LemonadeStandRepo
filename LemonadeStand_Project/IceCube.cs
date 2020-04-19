@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class IceCube : Item
+    public class IceCube : Item
     {
         // member variables (HAS A)
         // melting point(time)
