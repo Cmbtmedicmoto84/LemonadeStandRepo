@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class Date
+    public class Date
     {
         // member variables (HAS A)
         public Weather weather;

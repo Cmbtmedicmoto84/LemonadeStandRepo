@@ -8,6 +8,8 @@ namespace LemonadeStand_Project
     {
         // member variables (HAS A)
         // melting point(time)
+        string name;
+        public List<int> cubesOfIce = new List<int>();
 
         // constructor (SPAWNER)
         public IceCube()

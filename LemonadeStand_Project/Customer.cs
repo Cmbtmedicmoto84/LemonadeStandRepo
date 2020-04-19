@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    class Customer
+    public class Customer
     {
         // member variables (HAS A)
         private List<string> names;

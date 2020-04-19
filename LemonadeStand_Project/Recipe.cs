@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Recipe
+    public class Recipe : Inventory
     {
         public List<Lemon> lemons;
         public List<SugarCube> sugarCubes;
@@ -16,39 +16,23 @@ namespace LemonadeStand_Project
         // constructor (SPAWNER)
         public Recipe()
         {
-            public List<int> cubesOfIce = new List<int>();
-            public List<int> lemonsToAdd = new List<int>();
-            public List<int> cubesOfSugar = new List<int>();
-        
-    
-    
+
+        }
 
         // member methods (CAN DO)
-        public void AddLemonsToInventory(int numberOfLemons)
+        public void AddLemonsToRecipe(int numberOfLemons)
         {
-            for (int i = 0; i < numberOfLemons; i++)
-            {
-                Lemon lemon = new Lemon();
-                lemons.Add(lemon);
-            }
+           
         }
 
-        public void AddSugarCubesToInventory(int numberOfSugarCubes)
+        public void AddSugarCubesToRecipe(int numberOfSugarCubes)
         {
-            for (int i = 0; i < numberOfSugarCubes; i++)
-            {
-                SugarCube sugarCube = new SugarCube();
-                sugarCubes.Add(sugarCube);
-            }
+
         }
 
-        public void AddIceCubesToInventory(int numberOfIceCubes)
+        public void AddIceCubesToRecipe(int numberOfIceCubes)
         {
-            for (int i = 0; i < numberOfIceCubes; i++)
-            {
-                IceCube iceCube = new IceCube();
-                iceCubes.Add(iceCube);
-            }
+
         }
     }
 }
