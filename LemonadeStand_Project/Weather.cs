@@ -10,6 +10,7 @@ namespace LemonadeStand_Project
         public int tempVariableOne;
         public int tempVariableTwo;
         Random random = new Random();
+
         
 
         // constructor (SPAWNER)

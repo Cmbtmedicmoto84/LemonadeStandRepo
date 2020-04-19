@@ -8,12 +8,14 @@ namespace LemonadeStand_Project
     {
         // member variables (HAS A)
         public int capacity;
+        public string capacityMeasure;
         //public string name;
 
         // constructor (SPAWNER)
         public Cup()
         {
-
+            capacity = 10;
+            capacityMeasure = "ounces";
         }
 
         // member methods (CAN DO)

@@ -6,12 +6,14 @@ namespace LemonadeStand_Project
 {
     class ForecastConditions : Weather
     {
-        public string forecast;
-
-
-        public ForecastConditions(int tempVariableOne, int tempVariableTwo, string forecast)
+        List<string> forecastedConditions = new List<string>();
+        Random random = new Random();
+        public int CheckForecast()
         {
-            
+            int forecastCheckRoll = random.Next(1, 2);
+            Console.ReadLine();
+            return forecastCheckRoll;
         }
+
     }
 }
