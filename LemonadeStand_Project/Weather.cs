@@ -7,73 +7,69 @@ namespace LemonadeStand_Project
     class Weather
     {
         // member variables (HAS A)
-        public string condition;
-        public int tempVariable1;
-        public int tempVariable2;
+        public int tempVariableOne;
+        public int tempVariableTwo;
         Random random = new Random();
         
 
         // constructor (SPAWNER)
         public Weather()
         {
-            tempVariable1 = 68;
-            tempVariable2 = 75;
+            tempVariableOne = 71;
+            tempVariableTwo = 88;
         }
 
         // member methods (CAN DO)
             
         public int CheckTemp()
         {
-            int tempLevelRoll = random.Next(1, 2);
-            Console.WriteLine();
-            //Console.ReadLine();
-            return tempLevelRoll;
+            int tempCheckRoll = random.Next(1, 2);
+            Console.ReadLine();
+            return tempCheckRoll;
         }
+        
 
-        public void CompareVariableWeather(int tempCheck1, int tempCheck2)
+        public void CompareVariableWeather(int tempCheckOne, int tempCheckTwo)
         {
-            if (tempCheck1 < tempCheck2)
+            if (tempCheckOne ==1)
             {
-                Console.WriteLine("");
-                tempVariable2++;
+                Console.ReadLine();
+                tempVariableOne++;
             }
-            else if (tempCheck1 > tempCheck2)
+            else if (tempCheckTwo ==2)
             {
-                Console.WriteLine("");
-                tempVariable1++;
-            }
-            else
-            {
-                Console.WriteLine("");
+                Console.ReadLine();
+                tempVariableTwo++;
             }
         }
+        
 
         public void DetermineWeather()
         {
-            if (tempVariable1 == 1)
+            if (tempVariableOne == 72)
             {
-                Console.WriteLine("Todays temperature will be " + tempVariable1 + " degrees!");
+                Console.WriteLine("Todays temperature will be " + tempVariableOne + " degrees!");
             }
-            else if (tempVariable2 == 2)
+            else if (tempVariableTwo == 89)
             {
-                Console.WriteLine("Todays temperature is looking to be at " + tempVariable2 + " degrees!!");
+                Console.WriteLine("Todays temperature is looking to be at " + tempVariableTwo + " degrees!!");
             }
-
         }
-
-
-        
 
 
 
         public void RunWeather()
         {
-            while(tempVariable1 == 1 && tempVariable2 < 2)
-            {
-                int tempCheck1 = CheckTemp();
-                int tempCheck2 = CheckTemp();
-                CompareVariableWeather(tempCheck1, tempCheck2);
-            }
+            //while(tempVariable1 < 72 && tempVariable2 < 89)
+            //{
+            //    //    int tempCheck1 = CheckTemp();
+            //    //    int tempCheck2 = CheckTemp();
+            //    CompareVariableWeather(tempCheck1, tempCheck2);
+            //}
+            int tempCheckOne = CheckTemp();
+            int tempCheckTwo = CheckTemp();
+            CompareVariableWeather(tempCheckOne, tempCheckTwo);
+
             DetermineWeather();
             {
                 Console.ReadLine();
