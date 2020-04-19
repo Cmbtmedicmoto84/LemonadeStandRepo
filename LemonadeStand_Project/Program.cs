@@ -6,7 +6,9 @@ namespace LemonadeStand_Project
     {
         static void Main(string[] args)
         {
-            
+            Weather weather = new Weather();
+            weather.RunWeather();
+            //Console.ReadLine();
         }
     }
 }
