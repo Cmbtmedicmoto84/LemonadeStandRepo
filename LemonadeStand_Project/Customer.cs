@@ -10,8 +10,8 @@ namespace LemonadeStand_Project
         public string name;
         public bool customerAtLemonadeStand;
         public bool isInterestedInPurchase;
-        Weather weather;
-        ForecastConditions ForecastConditions;
+        //Weather weather;
+        //ForecastConditions ForecastConditions;
         //private List<string> names;
 
 
@@ -25,35 +25,45 @@ namespace LemonadeStand_Project
         // member methods (CAN DO)
         public void WalkToLemonadeStand()
         {
-            if(isInterestedInPurchase == false)
+            if(customerAtLemonadeStand == true)
             {
                 //weather, price variable to influence purchase?
-                if (customerAtLemonadeStand == true && )
+                if (isInterestedInPurchase = !isInterestedInPurchase)
                 {
-                    LeaveLemonadeStand();
+                    Console.WriteLine("A customer has stopped at your stand!");
                 }
 
             }
-            else
+            else if (customerAtLemonadeStand == false)
             {
                 //not interested due to weather, price variables?
-                Console.WriteLine("Customer purchased a cup of lemonade!");
+                LeaveLemonadeStand();
             }
         }
 
         public void PurchaseCupOfLemonade()
         {
-            isInterestedInPurchase = !isInterestedInPurchase;
-            Console.WriteLine("The customer left and did not purchase a cup of Lemonade!");
+            if(isInterestedInPurchase = !isInterestedInPurchase)
+            {
+                Console.WriteLine("The customer purchased a cup of lemonade!");
+            }
+            else
+            {
+                Console.WriteLine("The customer is not interested and continued walking.");
+            }
         }
 
 
         public void LeaveLemonadeStand()
         {
             //how to have customer leave after purchasing or not interested in purchasing?
-            if (isInterestedInPurchase == false)
+            if (isInterestedInPurchase = !isInterestedInPurchase)
             {
-                Console.WriteLine("Customer left");
+                Console.WriteLine("The customer looked but did not buy.");
+            }
+            else
+            {
+                
             }
         }
 

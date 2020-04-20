@@ -14,16 +14,25 @@ namespace LemonadeStand_Project
         // computer player?
         // second human player?
         // time limit = 7 days minimum with 24 hours per day
-
+        public int CurrentDay
+        {
+            get
+            {
+                return currentDay;
+            }
+        }
 
         // constructor (SPAWNER)
         public Game()
         {
-            weatherConditions = new List<string>() { "Sunny", "Overcast", "Cloudy", "Slight Showers" };
+            currentDay = 7;
         }
 
         // member methods (CAN DO)
-
+        public void TimeToPlay()
+        {
+            Console.WriteLine("You have " + currentDay +" days to make as much of a profit as you can!  GOOD LUCK!!");
+        }
 
 
         private void RunGame()

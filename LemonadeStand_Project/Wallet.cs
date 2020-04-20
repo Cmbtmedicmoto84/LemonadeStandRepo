@@ -6,24 +6,32 @@ namespace LemonadeStand_Project
 {
     public class Wallet
     {
-        private double money;
+        private double quantityOfMoney;
 
-        public double Money
+        //properties
+        public double QuantityOfMoney
         {
             get
             {
-                return money;
+                return quantityOfMoney;
             }
         }
 
+        //constructor
         public Wallet()
         {
-            money = 20.00;
+            quantityOfMoney = 20.00;
         }
 
+        //member methods
         public void PayMoneyForItems(double transactionAmount)
         {
-            money -= transactionAmount;
+            quantityOfMoney -= transactionAmount;
+        }
+
+        public void DisplayCurrentCashOnHand()
+        {
+            Console.WriteLine("You have $" + quantityOfMoney + " available.");
         }
     }
 }
