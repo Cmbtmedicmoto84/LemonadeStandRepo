@@ -22,6 +22,7 @@ namespace LemonadeStand_Project
 
         // member methods (CAN DO)
         // buy more supplies
+        
         // make more lemonade
         // choose lemonade recipe variations
 

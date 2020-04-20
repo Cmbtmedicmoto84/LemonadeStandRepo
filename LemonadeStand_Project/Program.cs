@@ -6,7 +6,12 @@ namespace LemonadeStand_Project
     {
         static void Main(string[] args)
         {
-            
+            Customer customer = new Customer();
+
+            customer.WalkToLemonadeStand();
+            customer.PurchaseCupOfLemonade();
+        
+        
         }
     }
 }

@@ -5,36 +5,80 @@ using System.Text;
 namespace LemonadeStand_Project
 {
 
+
     public class Weather
     {
-        List<ForecastConditions> forecastCondition;
+        // member variables (HAS A)
+        public int tempVariableOne;
+        public int tempVariableTwo;
+        Random random = new Random();
 
+        // constructor (SPAWNER)
         public Weather()
         {
-            forecastCondition = new List<ForecastConditions>();
+            tempVariableOne = 71;
+            tempVariableTwo = 88;
         }
 
-        public void AddForecastConditions(ForecastConditions forecastConditions)
+        // member methods (CAN DO)
+
+        public int CheckTemp()
         {
-            forecastCondition.Add(forecastConditions);
+            int tempCheckRoll = random.Next(1, 2);
+            Console.ReadLine();
+            return tempCheckRoll;
+        }
+
+
+        public void CompareVariableWeather(int tempCheckOne, int tempCheckTwo)
+        {
+            if (tempCheckOne == 1)
+            {
+                Console.ReadLine();
+                tempVariableOne++;
+            }
+            else if (tempCheckTwo == 2)
+            {
+                Console.ReadLine();
+                tempVariableTwo++;
+            }
+        }
+
+
+        public void DetermineWeather()
+        {
+            if (tempVariableOne == 72)
+            {
+                Console.WriteLine("Todays temperature will be " + tempVariableOne + " degrees!");
+            }
+            else if (tempVariableTwo == 89)
+            {
+                Console.WriteLine("Todays temperature is looking to be at " + tempVariableTwo + " degrees!!");
+            }
+        }
+
+
+
+
+
+        public void RunWeather()
+        {
+            int tempCheckOne = CheckTemp();
+            int tempCheckTwo = CheckTemp();
+            CompareVariableWeather(tempCheckOne, tempCheckTwo);
+
+            DetermineWeather();
+            {
+                Console.ReadLine();
+            }
         }
     }
 }
 
 
-        
-        
-        
-        
-        //public void RunWeather()
-        //{
-        //    int tempCheckOne = CheckTemp();
-        //    int tempCheckTwo = CheckTemp();
-        //    CompareVariableWeather(tempCheckOne, tempCheckTwo);
 
-        //    DetermineWeather();
-        //    {
-        //        Console.ReadLine();
-        //    }
 
-        //}
+
+
+
+
