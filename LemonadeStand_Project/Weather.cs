@@ -21,29 +21,23 @@ namespace LemonadeStand_Project
         }
 
         // member methods (CAN DO)
-
         public int CheckTemp()
         {
             int tempCheckRoll = random.Next(1, 2);
-            //Console.ReadLine();
             return tempCheckRoll;
         }
-
 
         public void CompareVariableWeather(int tempCheckOne, int tempCheckTwo)
         {
             if (tempCheckOne == 1)
             {
-                //Console.ReadLine();
                 tempVariableOne++;
             }
             else if (tempCheckTwo == 2)
             {
-                //Console.ReadLine();
                 tempVariableTwo++;
             }
         }
-
 
         public void DetermineWeather()
         {
@@ -56,8 +50,6 @@ namespace LemonadeStand_Project
                 Console.WriteLine("Todays temperature is looking to be at " + tempVariableTwo + " degrees!!");
             }
         }
-
-
 
 
 

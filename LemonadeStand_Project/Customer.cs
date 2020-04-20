@@ -10,7 +10,9 @@ namespace LemonadeStand_Project
         public string name;
         public bool customerAtLemonadeStand;
         public bool isInterestedInPurchase;
-        private List<string> names;
+        Weather weather;
+        ForecastConditions ForecastConditions;
+        //private List<string> names;
 
 
         // constructor (SPAWNER)
@@ -21,14 +23,12 @@ namespace LemonadeStand_Project
         }
 
         // member methods (CAN DO)
-
         public void WalkToLemonadeStand()
         {
-            //how to have customer automatically walk to stand?
             if(isInterestedInPurchase == false)
             {
                 //weather, price variable to influence purchase?
-                if (customerAtLemonadeStand == true)
+                if (customerAtLemonadeStand == true && )
                 {
                     LeaveLemonadeStand();
                 }
