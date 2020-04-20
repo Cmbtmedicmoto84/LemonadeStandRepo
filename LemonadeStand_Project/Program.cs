@@ -6,6 +6,12 @@ namespace LemonadeStand_Project
     {
         static void Main(string[] args)
         {
+            Weather weather = new Weather();
+
+            weather.RunWeather();
+            weather.DetermineWeather();
+
+
             Customer customer = new Customer();
 
             customer.WalkToLemonadeStand();

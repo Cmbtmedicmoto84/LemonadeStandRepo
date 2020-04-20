@@ -25,7 +25,7 @@ namespace LemonadeStand_Project
         public int CheckTemp()
         {
             int tempCheckRoll = random.Next(1, 2);
-            Console.ReadLine();
+            //Console.ReadLine();
             return tempCheckRoll;
         }
 
@@ -34,12 +34,12 @@ namespace LemonadeStand_Project
         {
             if (tempCheckOne == 1)
             {
-                Console.ReadLine();
+                //Console.ReadLine();
                 tempVariableOne++;
             }
             else if (tempCheckTwo == 2)
             {
-                Console.ReadLine();
+                //Console.ReadLine();
                 tempVariableTwo++;
             }
         }
@@ -66,11 +66,6 @@ namespace LemonadeStand_Project
             int tempCheckOne = CheckTemp();
             int tempCheckTwo = CheckTemp();
             CompareVariableWeather(tempCheckOne, tempCheckTwo);
-
-            DetermineWeather();
-            {
-                Console.ReadLine();
-            }
         }
     }
 }
