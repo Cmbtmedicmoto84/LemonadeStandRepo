@@ -9,10 +9,24 @@ namespace LemonadeStand_Project
     public class Weather
     {
         // member variables (HAS A)
-        public int tempVariableOne;
-        public int tempVariableTwo;
+        private int tempVariableOne;
+        private int tempVariableTwo;
         Random random = new Random();
 
+        public int TempVariableOne
+        {
+            get
+            {
+                return tempVariableOne;
+            }
+        }
+        public int TempVariableTwo
+        {
+            get
+            {
+                return tempVariableTwo;
+            }
+        }
         // constructor (SPAWNER)
         public Weather()
         {

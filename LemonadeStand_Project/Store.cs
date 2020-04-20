@@ -26,10 +26,10 @@ namespace LemonadeStand_Project
         {
             int lemonsToPurchase = UserInterface.GetNumberOfItems("lemons");
             double transactionAmount = CalculateTransactionAmount(lemonsToPurchase, pricePerLemon);
-            if (player.wallet.QuantityOfMoney >= transactionAmount)
+            if (player.myWallet.QuantityOfMoney >= transactionAmount)
             {
-                player.wallet.PayMoneyForItems(transactionAmount);
-                player.inventory.AddLemonsToInventory(lemonsToPurchase);
+                player.myWallet.PayMoneyForItems(transactionAmount);
+                player.myInventory.AddLemonsToInventory(lemonsToPurchase);
             }
         }
 
@@ -37,10 +37,10 @@ namespace LemonadeStand_Project
         {
             int sugarToPurchase = UserInterface.GetNumberOfItems("sugar");
             double transactionAmount = CalculateTransactionAmount(sugarToPurchase, pricePerSugarCube);
-            if (player.wallet.QuantityOfMoney >= transactionAmount)
+            if (player.myWallet.QuantityOfMoney >= transactionAmount)
             {
-                PerformTransaction(player.wallet, transactionAmount);
-                player.inventory.AddSugarCubesToInventory(sugarToPurchase);
+                PerformTransaction(player.myWallet, transactionAmount);
+                player.myInventory.AddSugarCubesToInventory(sugarToPurchase);
             }
         }
 
@@ -48,10 +48,10 @@ namespace LemonadeStand_Project
         {
             int iceCubesToPurchase = UserInterface.GetNumberOfItems("ice cubes");
             double transactionAmount = CalculateTransactionAmount(iceCubesToPurchase, pricePerIceCube);
-            if (player.wallet.QuantityOfMoney >= transactionAmount)
+            if (player.myWallet.QuantityOfMoney >= transactionAmount)
             {
-                PerformTransaction(player.wallet, transactionAmount);
-                player.inventory.AddIceCubesToInventory(iceCubesToPurchase);
+                PerformTransaction(player.myWallet, transactionAmount);
+                player.myInventory.AddIceCubesToInventory(iceCubesToPurchase);
             }
         }
 
@@ -59,10 +59,10 @@ namespace LemonadeStand_Project
         {
             int cupsToPurchase = UserInterface.GetNumberOfItems("cups");
             double transactionAmount = CalculateTransactionAmount(cupsToPurchase, pricePerCup);
-            if (player.wallet.QuantityOfMoney >= transactionAmount)
+            if (player.myWallet.QuantityOfMoney >= transactionAmount)
             {
-                PerformTransaction(player.wallet, transactionAmount);
-                player.inventory.AddCupsToInventory(cupsToPurchase);
+                PerformTransaction(player.myWallet, transactionAmount);
+                player.myInventory.AddCupsToInventory(cupsToPurchase);
             }
         }
 

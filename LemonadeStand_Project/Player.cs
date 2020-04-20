@@ -7,21 +7,44 @@ namespace LemonadeStand_Project
     public class Player
     {
         // member variables (HAS A)
-        public string name;
-        public Inventory inventory;
-        public Wallet wallet;
+        private string name;
+        public Wallet myWallet = new Wallet();
+        public Inventory myInventory = new Inventory();
+        
         public Recipe recipe;
         public Item item; //pitcher
+
+        public string PlayerName
+        {
+            get
+            {
+                return name;
+            }
+        }
+
+        public object wallet
+        {
+            get 
+            {
+                return myWallet;
+            }
+
+        }
 
         // constructor (SPAWNER)
         public Player()
         {
-            inventory = new Inventory();
-            wallet = new Wallet();
+            name = "Crystal";
         }
 
         // member methods (CAN DO)
         // buy more supplies
+        public void RunPlayerVariables()
+        {
+            Console.WriteLine(name + " the following is what you have for inventory and cash.");
+            myInventory.DisplayInventoryOnHand();
+            myWallet.DisplayCurrentCashOnHand();
+        }
         
         // make more lemonade
         // choose lemonade recipe variations

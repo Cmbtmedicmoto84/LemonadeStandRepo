@@ -7,13 +7,8 @@ namespace LemonadeStand_Project
     public class Customer
     {
         // member variables (HAS A)
-        public string name;
         public bool customerAtLemonadeStand;
         public bool isInterestedInPurchase;
-        //Weather weather;
-        //ForecastConditions ForecastConditions;
-        //private List<string> names;
-
 
         // constructor (SPAWNER)
         public Customer()
