@@ -48,17 +48,17 @@ namespace LemonadeStand_Project
         // member methods (CAN DO)
         public int CheckTemp()
         {
-            int tempCheckRoll = random.Next(1, 2);
+            int tempCheckRoll = random.Next(0, 20);
             return tempCheckRoll;
         }
 
         public void CompareVariableWeather(int tempCheckOne, int tempCheckTwo)
         {
-            if (tempCheckOne == 1)
+            if (tempCheckOne == 0 || tempCheckOne <=9)
             {
                 tempVariableOne++;
             }
-            else if (tempCheckTwo == 2)
+            else if (tempCheckTwo >= 10)
             {
                 tempVariableTwo++;
             }
