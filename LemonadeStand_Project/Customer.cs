@@ -7,6 +7,10 @@ namespace LemonadeStand_Project
     public class Customer
     {
         // member variables (HAS A)
+        public List<int> customersTeamOne;
+        public List<int> customersTeamTwo;
+        public int customerOne;
+        public int customerTwo;
         public bool customerAtLemonadeStand;
         public bool isInterestedInPurchase;
         Weather weather = new Weather();
@@ -15,11 +19,30 @@ namespace LemonadeStand_Project
         // constructor (SPAWNER)
         public Customer()
         {
+            customersTeamOne = new List<int>(100);
+            customersTeamTwo = new List<int>(55);
             customerAtLemonadeStand = false;
             isInterestedInPurchase = false;
         }
 
         // member methods (CAN DO)
+        public void CustomerWeatherBehavior()
+        {
+            Random random = new Random();
+            int custTeamOne = random.Next(customersTeamOne.Count);
+            int custTeamTwo = random.Next(customersTeamTwo.Count);
+            customerOne = customersTeamOne[custTeamOne];
+            customerTwo = customersTeamTwo[custTeamTwo];
+        }
+
+        //public void CustWeatherChoice()
+        //{
+        //    if(customerOne >= 55)
+        //    {
+                
+        //    }
+        //}
+
         public void WalkToLemonadeStand()
         {
             if(customerAtLemonadeStand == true)
@@ -27,14 +50,11 @@ namespace LemonadeStand_Project
                 //weather, price variable to influence purchase?
                 if (isInterestedInPurchase = !isInterestedInPurchase)
                 {
-                    Console.WriteLine("A customer has stopped at your stand!");
+                    if (customerOne >= 55) 
+                    {
+                        Console.WriteLine("A customer has stopped at your stand!");
+                    }   
                 }
-
-            }
-            else if (customerAtLemonadeStand == false)
-            {
-                //not interested due to weather, price variables?
-                LeaveLemonadeStand();
             }
         }
 
@@ -42,11 +62,14 @@ namespace LemonadeStand_Project
         {
             if(isInterestedInPurchase = !isInterestedInPurchase)
             {
-                Console.WriteLine("The customer purchased a cup of lemonade!");
+                if (customerOne >= 55)
+                {
+                    Console.WriteLine("The customer purchased a cup of lemonade!");
+                }       
             }
-            else
+            else if (customerTwo < 55)
             {
-                Console.WriteLine("The customer is not interested and continued walking.");
+                Console.WriteLine("The customer said it wasn't the best weather for cold lemonade and continued walking.");
             }
         }
 
@@ -57,10 +80,6 @@ namespace LemonadeStand_Project
             if (isInterestedInPurchase = !isInterestedInPurchase)
             {
                 Console.WriteLine("The customer looked but did not buy.");
-            }
-            else
-            {
-                
             }
         }
 

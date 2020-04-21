@@ -32,7 +32,7 @@ namespace LemonadeStand_Project
         // constructor (SPAWNER)
         public Weather()
         {
-            forecastChoices = new List<string>() { "Sunny", "Cloudy", "Overcast", "Raining", "Windy" };
+            forecastChoices = new List<string>() { "Sunny" , "Cloudy" , "Overcast" , "Raining" , "Windy" , "Warm" , "Humid" };
             tempVariableOne = random.Next(71, 88);
             tempVariableTwo = random.Next(89, 97);
         }

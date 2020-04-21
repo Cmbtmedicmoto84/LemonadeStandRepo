@@ -6,7 +6,6 @@ namespace LemonadeStand_Project
 {
     public class ForecastConditions : Weather
     {
-        //Weather weather = new Weather();
         Random random = new Random();
         public List<string> forecasts;
         public string forecast;
