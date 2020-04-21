@@ -4,8 +4,6 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-
-
     public class Weather
     {
         // member variables (HAS A)
@@ -16,13 +14,6 @@ namespace LemonadeStand_Project
         //public List<string> forecast;
         Random random = new Random();
 
-        //public string ForecastChoices
-        //{
-        //    get
-        //    {
-        //        return forecasts;
-        //    }
-        //}
         public int TempVariableOne
         {
             get
@@ -37,6 +28,7 @@ namespace LemonadeStand_Project
                 return tempVariableTwo;
             }
         }
+        
         // constructor (SPAWNER)
         public Weather()
         {

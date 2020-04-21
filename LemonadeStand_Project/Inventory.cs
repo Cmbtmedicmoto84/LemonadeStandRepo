@@ -8,50 +8,25 @@ namespace LemonadeStand_Project
     {
         // member variables (HAS A)
         public List<int> Lemon;
-        private int MyLemons;
+        private int MyLemonsStarting;
         public List<int> SugarCube;
-        private int MySugarCubes;
+        private int MySugarCubesStarting;
         public List<int> IceCube;
-        private int MyIceCubes;
+        private int MyIceCubesStarting;
         public List<int> Cup;
-        private int MyCups;
-
-        //public int Lemons
-        //{
-        //    get
-        //    {
-        //        return MyLemons;
-        //    }
-        //}
-        //public int SugarCubes
-        //{
-        //    get
-        //    {
-        //        return MySugarCubes;
-        //    }
-        //}
-        //public int IceCubes
-        //{
-        //    get
-        //    {
-        //        return MyIceCubes;
-        //    }
-        //}
-        //public int Cups
-        //{
-        //    get
-        //    {
-        //        return MyCups;
-        //    }
-        //}
+        private int MyCupsStarting;
+        public int MyLemons;
+        public int MySugarCubes;
+        public int MyIceCubes;
+        public int MyCups;
 
         // constructor (SPAWNER)
         public Inventory()
         {
-            //MyLemons = 0;
-            //MySugarCubes = 0;
-            //MyIceCubes = 0;
-            //MyCups = 0;
+            MyLemonsStarting = 0;
+            MySugarCubesStarting = 0;
+            MyIceCubesStarting = 0;
+            MyCupsStarting = 0;
         }
 
         // member methods (CAN DO)
@@ -93,8 +68,9 @@ namespace LemonadeStand_Project
 
         public void DisplayStartingInventory()
         {
-            Console.WriteLine("You are starting your day with a total of " + MyLemons + " lemons, " + MySugarCubes + " sugar cubes, " + MyCups + " cups and " + MyIceCubes + " ice cubes.");
+            Console.WriteLine("You are starting your day with a total of " + MyLemonsStarting + " lemons, " + MySugarCubesStarting + " sugar cubes, " + MyCupsStarting + " cups and " + MyIceCubesStarting + " ice cubes.");
         }
+
 
         public void MyInventory()
         {

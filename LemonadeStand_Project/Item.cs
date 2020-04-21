@@ -7,11 +7,11 @@ namespace LemonadeStand_Project
     public class Item : Store
     {
         // member variables (HAS A)
-        protected string name;
-        public Cup cup;
-        public Lemon lemon;
-        public IceCube icecube;
-        public SugarCube sugarcube;
+        public string name;
+        //public Cup cup;
+        //public Lemon lemon;
+        //public IceCube icecube;
+        //public SugarCube sugarcube;
 
         // public int quantityToBuy;
 

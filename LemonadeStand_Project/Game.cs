@@ -12,7 +12,7 @@ namespace LemonadeStand_Project
         Weather weather = new Weather();
         Customer customer = new Customer();
         ForecastConditions forecastConditions = new ForecastConditions();
-        Store store = new Store();
+        //Store store = new Store();
 
 
         //public List<string> weatherConditions;
@@ -36,7 +36,7 @@ namespace LemonadeStand_Project
             forecastConditions.ForecastChoice();
 
             player.RunPlayerVariables();
-
+            
 
             date.TimeToPlay();
 

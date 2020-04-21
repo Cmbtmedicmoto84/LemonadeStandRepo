@@ -15,14 +15,6 @@ namespace LemonadeStand_Project
         public Recipe recipe;
         public Item item; //pitcher
 
-        //public string PlayerName
-        //{
-        //    get
-        //    {
-        //        return name;
-        //    }
-        //}
-
         public object UserStore
         {
             get
@@ -46,18 +38,16 @@ namespace LemonadeStand_Project
         }
 
         // member methods (CAN DO)
-        // buy more supplies
+
         public void RunPlayerVariables()
         {
             Console.WriteLine(name + " the following is what you have for inventory and cash.");
-            myInventory.DisplayStartingInventory();
             myWallet.DisplayCurrentCashOnHand();
-
-
-
-
+            myInventory.DisplayStartingInventory();
         }
+
         
+
         // make more lemonade
         // choose lemonade recipe variations
 
