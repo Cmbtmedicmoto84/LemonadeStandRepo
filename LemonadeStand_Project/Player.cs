@@ -7,21 +7,29 @@ namespace LemonadeStand_Project
     public class Player
     {
         // member variables (HAS A)
-        private string name;
+        public string name;
         public Wallet myWallet = new Wallet();
         public Inventory myInventory = new Inventory();
+        public Store myStore = new Store();
         
         public Recipe recipe;
         public Item item; //pitcher
 
-        public string PlayerName
+        //public string PlayerName
+        //{
+        //    get
+        //    {
+        //        return name;
+        //    }
+        //}
+
+        public object UserStore
         {
             get
             {
-                return name;
+                return myStore;
             }
         }
-
         public object wallet
         {
             get 
@@ -42,8 +50,12 @@ namespace LemonadeStand_Project
         public void RunPlayerVariables()
         {
             Console.WriteLine(name + " the following is what you have for inventory and cash.");
-            myInventory.DisplayInventoryOnHand();
+            myInventory.DisplayStartingInventory();
             myWallet.DisplayCurrentCashOnHand();
+
+
+
+
         }
         
         // make more lemonade

@@ -9,6 +9,8 @@ namespace LemonadeStand_Project
         // member variables (HAS A)
         public bool customerAtLemonadeStand;
         public bool isInterestedInPurchase;
+        Weather weather = new Weather();
+        ForecastConditions forecastConditions = new ForecastConditions();
 
         // constructor (SPAWNER)
         public Customer()

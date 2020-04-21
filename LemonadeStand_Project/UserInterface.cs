@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    static class UserInterface
+    public static class UserInterface
     {
         public static int GetNumberOfItems(string itemsToGet)
         {
@@ -18,7 +18,6 @@ namespace LemonadeStand_Project
 
                 userInputIsAnInteger = Int32.TryParse(Console.ReadLine(), out quantityOfItem);
             }
-
             return quantityOfItem;
         }
     }

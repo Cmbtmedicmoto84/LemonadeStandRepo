@@ -48,14 +48,10 @@ namespace LemonadeStand_Project
         // constructor (SPAWNER)
         public Inventory()
         {
-            //MyLemons = new List<Lemon>();
-            MyLemons = 0;
-           //SugarCubes = new List<SugarCube>();
-            MySugarCubes = 0;
-            //IceCubes = new List<IceCube>();
-            MyIceCubes = 0;
-           // Cups = new List<Cup>();
-            MyCups = 0;
+            //MyLemons = 0;
+            //MySugarCubes = 0;
+            //MyIceCubes = 0;
+            //MyCups = 0;
         }
 
         // member methods (CAN DO)
@@ -95,9 +91,14 @@ namespace LemonadeStand_Project
             }
         }
 
-        public void DisplayInventoryOnHand()
+        public void DisplayStartingInventory()
         {
-            Console.WriteLine("You have a total of " + MyLemons + " lemons, " + MySugarCubes + " sugar cubes, " + MyCups + " cups and " + MyIceCubes + " ice cubes.");
+            Console.WriteLine("You are starting your day with a total of " + MyLemons + " lemons, " + MySugarCubes + " sugar cubes, " + MyCups + " cups and " + MyIceCubes + " ice cubes.");
+        }
+
+        public void MyInventory()
+        {
+
         }
     }
 }

@@ -41,8 +41,8 @@ namespace LemonadeStand_Project
         public Weather()
         {
             forecastChoices = new List<string>() { "Sunny", "Cloudy", "Overcast", "Raining", "Windy" };
-            tempVariableOne = 71;
-            tempVariableTwo = 88;
+            tempVariableOne = random.Next(71, 88);
+            tempVariableTwo = random.Next(89, 97);
         }
 
         // member methods (CAN DO)
@@ -56,27 +56,15 @@ namespace LemonadeStand_Project
         {
             if (tempCheckOne == 0 || tempCheckOne <=9)
             {
-                tempVariableOne++;
+                Console.WriteLine("Todays temperature will be " + tempVariableOne + " degrees!");
+                tempVariableOne ++;
             }
             else if (tempCheckTwo >= 10)
             {
+                Console.WriteLine("Todays temperature is looking to be at " + tempVariableTwo + " degrees!!");
                 tempVariableTwo++;
             }
         }
-
-        public void DetermineWeather()
-        {
-            if (tempVariableOne == 72)
-            {
-                Console.WriteLine("Todays temperature will be " + tempVariableOne + " degrees!");
-            }
-            else if (tempVariableTwo == 89)
-            {
-                Console.WriteLine("Todays temperature is looking to be at " + tempVariableTwo + " degrees!!");
-            }
-        }
-        
-
 
         public void RunWeather()
         {
