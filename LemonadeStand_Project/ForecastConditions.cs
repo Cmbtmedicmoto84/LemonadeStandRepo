@@ -6,13 +6,26 @@ namespace LemonadeStand_Project
 {
     public class ForecastConditions : Weather
     {
-        public string forecastName;
-        //add Cloudy, Sunny, Overcast, Rain, Windy with possible combinations of two?
- 
+        //Weather weather = new Weather();
+        Random random = new Random();
+        public List<string> forecasts;
+        public string forecast;
+       
         public ForecastConditions()
         {
-            
+            forecasts = new List<string>() { "Sunny" , "Cloudy" , "Overcast" , "Raining" , "Windy" };
         }
+        
+
+
+        public void ForecastChoice()
+        {
+            Random random = new Random();
+            int weatherCondition = random.Next(forecasts.Count);
+            forecast = forecasts[weatherCondition];
+            Console.WriteLine("Looks like it will be " + forecast); 
+        }
+
 
     }
 }

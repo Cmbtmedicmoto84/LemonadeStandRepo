@@ -11,8 +11,18 @@ namespace LemonadeStand_Project
         // member variables (HAS A)
         private int tempVariableOne;
         private int tempVariableTwo;
+        protected string forecasts;
+        public List<string> forecastChoices = new List<string>();
+        //public List<string> forecast;
         Random random = new Random();
 
+        //public string ForecastChoices
+        //{
+        //    get
+        //    {
+        //        return forecasts;
+        //    }
+        //}
         public int TempVariableOne
         {
             get
@@ -30,6 +40,7 @@ namespace LemonadeStand_Project
         // constructor (SPAWNER)
         public Weather()
         {
+            forecastChoices = new List<string>() { "Sunny", "Cloudy", "Overcast", "Raining", "Windy" };
             tempVariableOne = 71;
             tempVariableTwo = 88;
         }
@@ -64,7 +75,7 @@ namespace LemonadeStand_Project
                 Console.WriteLine("Todays temperature is looking to be at " + tempVariableTwo + " degrees!!");
             }
         }
-
+        
 
 
         public void RunWeather()
