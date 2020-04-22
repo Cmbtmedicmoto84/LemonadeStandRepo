@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Text;
 
 namespace LemonadeStand_Project
@@ -7,37 +8,50 @@ namespace LemonadeStand_Project
     public class Customer
     {
         // member variables (HAS A)
-        public List<int> customersTeamOne;
-        public List<int> customersTeamTwo;
+        private int customersGoodWeather;
+        private int customersCrummyWeather;
         public int customerOne;
         public int customerTwo;
         public bool isCustomerAtStand;
         public bool isInterestedInPurchase;
         public bool isCustomerOneInterested;
         public bool isCustomerTwoInterested;
+        Weather weather = new Weather();
+        Random random = new Random();
 
 
         // constructor (SPAWNER)
         public Customer()
         {
-            customersTeamOne = new List<int>(100);
-            customersTeamTwo = new List<int>(55);
+            customersGoodWeather = random.Next(71, 88);
+            customersCrummyWeather = random.Next(89, 97);
             isCustomerAtStand = false;
             isInterestedInPurchase = false;
         }
 
-        // member methods (CAN DO)
-        public void CustomerWeatherBehavior()
+        public int CheckWeather()
         {
-            Random random = new Random();
-            int custTeamOne = random.Next(customersTeamOne.Count);
-            int custTeamTwo = random.Next(customersTeamTwo.Count);
-            customerOne = customersTeamOne[custTeamOne];
-            customerTwo = customersTeamTwo[custTeamTwo];
+            int weatherCheckRoll = random.Next(0, 20);
+            return weatherCheckRoll;
+        }
+
+        // member methods (CAN DO)
+        public void CompareCustomerBehavior(int custCheckOne, int custCheckTwo)
+        {
+            if (custCheckOne == 0 || custCheckOne <= 9)
+            {
+                Console.WriteLine("Todays temperatures should bring lots of customers!");
+            }
+            else if (custCheckTwo >= 10)
+            {
+                Console.WriteLine("I don't think todays temperatures are going to bring many people out for lemonade!");
+            }
+
         }
 
         public void WalkToLemonadeStand()
         {
+            
             if (isCustomerAtStand == !isCustomerAtStand)
             {
                 Console.WriteLine("A customer has stopped at your stand!");
@@ -47,7 +61,6 @@ namespace LemonadeStand_Project
                 LeaveLemonadeStand();
             }
         }
-
         public void PurchaseCupOfLemonade()
         {
             if(isInterestedInPurchase = !isInterestedInPurchase)
@@ -55,7 +68,7 @@ namespace LemonadeStand_Project
                 if (customerOne >= 55)
                 {
                     Console.WriteLine("The customer purchased a cup of lemonade!");
-                }       
+                }
             }
             else if (customerTwo < 55)
             {
@@ -71,6 +84,15 @@ namespace LemonadeStand_Project
             {
                 Console.WriteLine("The customer looked but did not buy.");
             }
+        }
+
+
+
+        public void RunBehaviors()
+        {
+            int custCheckOne = CheckWeather();
+            int custCheckTwo = CheckWeather();
+            CompareCustomerBehavior(custCheckOne, custCheckTwo);
         }
 
 

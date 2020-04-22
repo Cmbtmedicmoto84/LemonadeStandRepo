@@ -38,6 +38,8 @@ namespace LemonadeStand_Project
 
             date.TimeToPlay();
 
+            customer.RunBehaviors();
+
             customer.WalkToLemonadeStand();
             customer.PurchaseCupOfLemonade();
         }

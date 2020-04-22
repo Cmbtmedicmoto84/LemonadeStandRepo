@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace LemonadeStand_Project
@@ -11,6 +12,7 @@ namespace LemonadeStand_Project
         private double pricePerSugarCube;
         private double pricePerIceCube;
         private double pricePerCup;
+        private List<PointOfSaleInterface> sales;
 
         // constructor (SPAWNER)
         public Store()
@@ -21,6 +23,10 @@ namespace LemonadeStand_Project
             pricePerCup = .25;
         }
 
+        public Store(List<PointOfSaleInterface> sales)
+        {
+            this.sales = sales;
+        }
         // member methods (CAN DO)
         public void SellLemons(Player player)
         {
@@ -30,6 +36,10 @@ namespace LemonadeStand_Project
             {
                 player.wallet.PayMoneyForItems(transactionAmount);
                 player.inventory.AddLemonsToInventory(lemonsToPurchase);
+            }
+            foreach(PointOfSaleInterface sale in sales)
+            {
+                sale.AddLemonsToInventory();
             }
         }
 
@@ -42,6 +52,10 @@ namespace LemonadeStand_Project
                 PerformTransaction(player.wallet, transactionAmount);
                 player.inventory.AddSugarCubesToInventory(sugarToPurchase);
             }
+            foreach (PointOfSaleInterface sale in sales)
+            {
+                sale.AddSugarCubesToInventory();
+            }
         }
 
         public void SellIceCubes(Player player)
@@ -53,6 +67,10 @@ namespace LemonadeStand_Project
                 PerformTransaction(player.wallet, transactionAmount);
                 player.inventory.AddIceCubesToInventory(iceCubesToPurchase);
             }
+            foreach (PointOfSaleInterface sale in sales)
+            {
+                sale.AddIceCubesToInventory();
+            }
         }
 
         public void SellCups(Player player)
@@ -63,6 +81,10 @@ namespace LemonadeStand_Project
             {
                 PerformTransaction(player.wallet, transactionAmount);
                 player.inventory.AddCupsToInventory(cupsToPurchase);
+            }
+            foreach (PointOfSaleInterface sale in sales)
+            {
+                sale.AddCupsToInventory();
             }
         }
 
