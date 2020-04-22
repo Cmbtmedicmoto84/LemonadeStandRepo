@@ -16,17 +16,31 @@ namespace LemonadeStand_Project
         public bool isInterestedInPurchase;
         public bool isCustomerOneInterested;
         public bool isCustomerTwoInterested;
-        Weather weather = new Weather();
         Random random = new Random();
+
+        public int CustomersGoodWeather
+        {
+            get
+            {
+                return customersGoodWeather;
+            }
+        }
+        public int CustomersCrummyWeather
+        {
+            get
+            {
+                return customersCrummyWeather;
+            }
+        }
 
 
         // constructor (SPAWNER)
         public Customer()
         {
-            customersGoodWeather = random.Next(71, 88);
-            customersCrummyWeather = random.Next(89, 97);
-            isCustomerAtStand = false;
-            isInterestedInPurchase = false;
+            customersGoodWeather = random.Next(71, 88); //call weather.temperature and similar forecast for comparison
+            {
+                
+            }
         }
 
         public int CheckWeather()
@@ -92,7 +106,7 @@ namespace LemonadeStand_Project
         {
             int custCheckOne = CheckWeather();
             int custCheckTwo = CheckWeather();
-            CompareCustomerBehavior(custCheckOne, custCheckTwo);
+            CompareCustomerBehavior(customersGoodWeather, customersCrummyWeather);
         }
 
 

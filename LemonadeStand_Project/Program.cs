@@ -8,8 +8,10 @@ namespace LemonadeStand_Project
         {
 
             Game game = new Game();
-
             game.RunGame();
+
+            Date date = new Date();
+            date.Calendar();
 
         }
     }

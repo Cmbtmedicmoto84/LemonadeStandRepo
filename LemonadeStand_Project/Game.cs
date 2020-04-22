@@ -11,7 +11,6 @@ namespace LemonadeStand_Project
         Date date = new Date();
         Weather weather = new Weather();
         Customer customer = new Customer();
-        ForecastConditions forecastConditions = new ForecastConditions();
         Store store = new Store();
 
         // second human player?
@@ -31,10 +30,7 @@ namespace LemonadeStand_Project
         {
             weather.RunWeather();
 
-            forecastConditions.ForecastChoice();
-
             player.RunPlayerVariables();
-
 
             date.TimeToPlay();
 

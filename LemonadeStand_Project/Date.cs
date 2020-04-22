@@ -4,29 +4,37 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Date
+    class Date
     {
         // member variables (HAS A)
-        private int currentDay;
+        private int daysToPlay;
+        Weather weather = new Weather();
+        public List<string> currentDay;
 
-        public int CurrentDay
+        public int DaysToPlay
         {
             get
             {
-                return currentDay;
+                return daysToPlay;
             }
         }
 
         // constructor (SPAWNER)
         public Date()
         {
-            currentDay = 7;
+            currentDay = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            daysToPlay = 7;
         }
 
         // member methods (CAN DO)
         public void TimeToPlay()
         {
-            Console.WriteLine("You have " + currentDay + " days to make as much of a profit as you can!  GOOD LUCK!!");
+            Console.WriteLine("You have " + daysToPlay + " days to make as much of a profit as you can!  GOOD LUCK!!");
+        }
+
+        public void Calendar()
+        {
+
         }
     }
 }
