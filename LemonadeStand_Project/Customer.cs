@@ -5,7 +5,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Customer
+    class Customer
     {
         // member variables (HAS A)
         private int customersGoodWeather;
@@ -33,14 +33,11 @@ namespace LemonadeStand_Project
             }
         }
 
-
         // constructor (SPAWNER)
         public Customer()
         {
-            customersGoodWeather = random.Next(71, 88); //call weather.temperature and similar forecast for comparison
-            {
-                
-            }
+            //call weather.temperature and similar forecast for comparison
+
         }
 
         public int CheckWeather()
@@ -54,18 +51,17 @@ namespace LemonadeStand_Project
         {
             if (custCheckOne == 0 || custCheckOne <= 9)
             {
-                Console.WriteLine("Todays temperatures should bring lots of customers!");
+                Console.WriteLine("I don't think todays temperatures are going to bring many people out for lemonade!");
             }
             else if (custCheckTwo >= 10)
             {
-                Console.WriteLine("I don't think todays temperatures are going to bring many people out for lemonade!");
+                Console.WriteLine("Todays temperatures should bring lots of customers!"); 
             }
 
         }
 
         public void WalkToLemonadeStand()
         {
-            
             if (isCustomerAtStand == !isCustomerAtStand)
             {
                 Console.WriteLine("A customer has stopped at your stand!");
@@ -90,7 +86,6 @@ namespace LemonadeStand_Project
             }
         }
 
-
         public void LeaveLemonadeStand()
         {
             //how to have customer leave after purchasing or not interested in purchasing?
@@ -106,7 +101,8 @@ namespace LemonadeStand_Project
         {
             int custCheckOne = CheckWeather();
             int custCheckTwo = CheckWeather();
-            CompareCustomerBehavior(customersGoodWeather, customersCrummyWeather);
+
+            CompareCustomerBehavior(customersCrummyWeather, customersGoodWeather);
         }
 
 

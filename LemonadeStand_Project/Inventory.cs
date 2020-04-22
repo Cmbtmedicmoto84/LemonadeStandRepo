@@ -11,14 +11,10 @@ namespace LemonadeStand_Project
         private int MyLemonsStarting;
         public List<SugarCube> sugarCubes;
         private int MySugarCubesStarting;
-        public List<IceCube> iceCubes;  //?????
+        public List<IceCube> iceCubes; 
         private int MyIceCubesStarting;
-        public List<Cup> cups;  //?????
+        public List<Cup> cups;
         private int MyCupsStarting;
-        public int MyLemons;
-        public int MySugarCubes;
-        public int MyIceCubes;
-        public int MyCups;
 
         // constructor (SPAWNER)
         public Inventory()
@@ -79,6 +75,12 @@ namespace LemonadeStand_Project
         public void MyInventory()
         {
 
+        }
+
+        // member methods (CAN DO)
+        public void AddLemonsToRecipe(int numberOfLemons)
+        {
+           
         }
     }
 }

@@ -8,7 +8,6 @@ namespace LemonadeStand_Project
     {
         private double money;
 
-
         //properties
         public double Money
         {

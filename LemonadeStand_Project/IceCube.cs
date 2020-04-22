@@ -7,8 +7,7 @@ namespace LemonadeStand_Project
     class IceCube : Item
     {
         // member variables (HAS A)
-        // melting point(time)
-        public string name;
+
 
         // constructor (SPAWNER)
         public IceCube()
@@ -17,6 +16,6 @@ namespace LemonadeStand_Project
         }
 
         // member methods (CAN DO)
-        // melt
+
     }
 }

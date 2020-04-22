@@ -13,8 +13,6 @@ namespace LemonadeStand_Project
         Customer customer = new Customer();
         Store store = new Store();
 
-        // second human player?
-
         // constructor (SPAWNER)
         public Game()
         {

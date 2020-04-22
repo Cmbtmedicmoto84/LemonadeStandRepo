@@ -11,7 +11,6 @@ namespace LemonadeStand_Project
         private int tempVariableTwo;
         public List<string> forecastChoices;
         public string forecast;
-        //public string forecasts;
 
         Random random = new Random();
 

@@ -10,9 +10,6 @@ namespace LemonadeStand_Project
         public string name;
         public Wallet wallet;
         public Inventory inventory;
-        
-        //public Recipe recipe;
-        //public Item item; //pitcher
 
         // constructor (SPAWNER)
         public Player()
@@ -23,7 +20,6 @@ namespace LemonadeStand_Project
         }
 
         // member methods (CAN DO)
-
         public void RunPlayerVariables()
         {
             Console.WriteLine(name + " the following is what you have for inventory and cash.");
