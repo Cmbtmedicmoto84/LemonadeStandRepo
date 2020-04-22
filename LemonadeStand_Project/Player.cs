@@ -4,36 +4,21 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Player
+    class Player
     {
         // member variables (HAS A)
         public string name;
-        public Wallet myWallet = new Wallet();
-        public Inventory myInventory = new Inventory();
-        public Store myStore = new Store();
+        public Wallet wallet;
+        public Inventory inventory;
         
-        public Recipe recipe;
-        public Item item; //pitcher
-
-        public object UserStore
-        {
-            get
-            {
-                return myStore;
-            }
-        }
-        public object wallet
-        {
-            get 
-            {
-                return myWallet;
-            }
-
-        }
+        //public Recipe recipe;
+        //public Item item; //pitcher
 
         // constructor (SPAWNER)
         public Player()
         {
+            inventory = new Inventory();
+            wallet = new Wallet();
             name = "Crystal";
         }
 
@@ -42,8 +27,8 @@ namespace LemonadeStand_Project
         public void RunPlayerVariables()
         {
             Console.WriteLine(name + " the following is what you have for inventory and cash.");
-            myWallet.DisplayCurrentCashOnHand();
-            myInventory.DisplayStartingInventory();
+            wallet.DisplayCurrentCashOnHand();
+            inventory.DisplayStartingInventory();
         }
 
         

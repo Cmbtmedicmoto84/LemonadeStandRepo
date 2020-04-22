@@ -4,16 +4,16 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Inventory
+    class Inventory
     {
         // member variables (HAS A)
-        public List<int> Lemon;
+        public List<Lemon> lemons;
         private int MyLemonsStarting;
-        public List<int> SugarCube;
+        public List<SugarCube> sugarCubes;
         private int MySugarCubesStarting;
-        public List<int> IceCube;
+        public List<IceCube> iceCubes;  //?????
         private int MyIceCubesStarting;
-        public List<int> Cup;
+        public List<Cup> cups;  //?????
         private int MyCupsStarting;
         public int MyLemons;
         public int MySugarCubes;
@@ -23,6 +23,10 @@ namespace LemonadeStand_Project
         // constructor (SPAWNER)
         public Inventory()
         {
+            lemons = new List<Lemon>();
+            sugarCubes = new List<SugarCube>();
+            iceCubes = new List<IceCube>();
+            cups = new List<Cup>();
             MyLemonsStarting = 0;
             MySugarCubesStarting = 0;
             MyIceCubesStarting = 0;
@@ -34,8 +38,8 @@ namespace LemonadeStand_Project
         {
             for (int i = 0; i < numberOfLemons; i++)
             {
-                Lemon MyLemon = new Lemon();
-                Lemon.Add(MyLemons);
+                Lemon lemon = new Lemon();
+                lemons.Add(lemon);
             }
         }
 
@@ -44,7 +48,7 @@ namespace LemonadeStand_Project
             for (int i = 0; i < numberOfSugarCubes; i++)
             {
                 SugarCube sugarCube = new SugarCube();
-                SugarCube.Add(MySugarCubes);
+                sugarCubes.Add(sugarCube);
             }
         }
 
@@ -53,7 +57,7 @@ namespace LemonadeStand_Project
             for (int i = 0; i < numberOfIceCubes; i++)
             {
                 IceCube iceCube = new IceCube();
-                IceCube.Add(MyIceCubes);
+                iceCubes.Add(iceCube);
             }
         }
 
@@ -62,7 +66,7 @@ namespace LemonadeStand_Project
             for (int i = 0; i < numberOfCups; i++)
             {
                 Cup cup = new Cup();
-                Cup.Add(MyCups);
+                cups.Add(cup);
             }
         }
 

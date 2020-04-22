@@ -4,19 +4,14 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Item : Store
+    abstract class Item
     {
         // member variables (HAS A)
         public string name;
-        //public Cup cup;
-        //public Lemon lemon;
-        //public IceCube icecube;
-        //public SugarCube sugarcube;
 
-        // public int quantityToBuy;
 
         // constructor (SPAWNER)
-        public Item()  // int quantityToBuy
+        public Item()
         {
 
         }

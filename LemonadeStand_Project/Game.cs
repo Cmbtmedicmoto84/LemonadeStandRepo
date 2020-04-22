@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Game
+    class Game
     {
         // member variables (HAS A)
         Player player = new Player();
@@ -12,17 +12,15 @@ namespace LemonadeStand_Project
         Weather weather = new Weather();
         Customer customer = new Customer();
         ForecastConditions forecastConditions = new ForecastConditions();
-        //Store store = new Store();
+        Store store = new Store();
 
-
-        //public List<string> weatherConditions;
         // second human player?
-
 
         // constructor (SPAWNER)
         public Game()
         {
             
+
         }
 
         // member methods (CAN DO)
@@ -36,7 +34,7 @@ namespace LemonadeStand_Project
             forecastConditions.ForecastChoice();
 
             player.RunPlayerVariables();
-            
+
 
             date.TimeToPlay();
 

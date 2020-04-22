@@ -4,14 +4,13 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Weather
+    class Weather
     {
         // member variables (HAS A)
         private int tempVariableOne;
         private int tempVariableTwo;
-        protected string forecasts;
+        public string forecasts;
         public List<string> forecastChoices = new List<string>();
-        //public List<string> forecast;
         Random random = new Random();
 
         public int TempVariableOne
@@ -32,7 +31,6 @@ namespace LemonadeStand_Project
         // constructor (SPAWNER)
         public Weather()
         {
-            forecastChoices = new List<string>() { "Sunny" , "Cloudy" , "Overcast" , "Raining" , "Windy" , "Warm" , "Humid" };
             tempVariableOne = random.Next(71, 88);
             tempVariableTwo = random.Next(89, 97);
         }
@@ -62,7 +60,7 @@ namespace LemonadeStand_Project
         {
             int tempCheckOne = CheckTemp();
             int tempCheckTwo = CheckTemp();
-            CompareVariableWeather(tempCheckOne, tempCheckTwo);
+            CompareVariableWeather(tempVariableOne, tempVariableTwo);
         }
     }
 }

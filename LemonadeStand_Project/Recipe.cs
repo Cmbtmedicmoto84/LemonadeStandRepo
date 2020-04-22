@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Recipe : Inventory
+    class Recipe : Inventory
     {
         public List<Lemon> lemons;
         public List<SugarCube> sugarCubes;

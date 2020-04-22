@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public static class UserInterface
+    static class UserInterface
     {
         public static int GetNumberOfItems(string itemsToGet)
         {

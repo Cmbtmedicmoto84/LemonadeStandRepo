@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Pitcher : Item
+    class Pitcher
     {
         // member variables (HAS A)
         public int fullCapacity;

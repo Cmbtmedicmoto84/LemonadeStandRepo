@@ -11,17 +11,18 @@ namespace LemonadeStand_Project
         public List<int> customersTeamTwo;
         public int customerOne;
         public int customerTwo;
-        public bool customerAtLemonadeStand;
+        public bool isCustomerAtStand;
         public bool isInterestedInPurchase;
-        Weather weather = new Weather();
-        ForecastConditions forecastConditions = new ForecastConditions();
+        public bool isCustomerOneInterested;
+        public bool isCustomerTwoInterested;
+
 
         // constructor (SPAWNER)
         public Customer()
         {
             customersTeamOne = new List<int>(100);
             customersTeamTwo = new List<int>(55);
-            customerAtLemonadeStand = false;
+            isCustomerAtStand = false;
             isInterestedInPurchase = false;
         }
 
@@ -35,26 +36,15 @@ namespace LemonadeStand_Project
             customerTwo = customersTeamTwo[custTeamTwo];
         }
 
-        //public void CustWeatherChoice()
-        //{
-        //    if(customerOne >= 55)
-        //    {
-                
-        //    }
-        //}
-
         public void WalkToLemonadeStand()
         {
-            if(customerAtLemonadeStand == true)
+            if (isCustomerAtStand == !isCustomerAtStand)
             {
-                //weather, price variable to influence purchase?
-                if (isInterestedInPurchase = !isInterestedInPurchase)
-                {
-                    if (customerOne >= 55) 
-                    {
-                        Console.WriteLine("A customer has stopped at your stand!");
-                    }   
-                }
+                Console.WriteLine("A customer has stopped at your stand!");
+            }
+            else
+            {
+                LeaveLemonadeStand();
             }
         }
 

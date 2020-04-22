@@ -4,15 +4,15 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class ForecastConditions : Weather
+    class ForecastConditions
     {
         Random random = new Random();
-        public List<string> forecasts;
+        public List<string> forecastChoices;
         public string forecast;
        
         public ForecastConditions()
         {
-            forecasts = new List<string>() { "Sunny" , "Cloudy" , "Overcast" , "Raining" , "Windy" };
+            forecastChoices = new List<string>() { "Sunny", "Cloudy", "Overcast", "Raining", "Windy", "Warm", "Humid" };
         }
         
 
@@ -20,8 +20,8 @@ namespace LemonadeStand_Project
         public void ForecastChoice()
         {
             Random random = new Random();
-            int weatherCondition = random.Next(forecasts.Count);
-            forecast = forecasts[weatherCondition];
+            int weatherCondition = random.Next(forecastChoices.Count);
+            forecast = forecastChoices[weatherCondition];
             Console.WriteLine("Looks like it will be " + forecast); 
         }
 

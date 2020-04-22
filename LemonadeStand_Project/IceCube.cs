@@ -4,12 +4,11 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class IceCube : Item
+    class IceCube : Item
     {
         // member variables (HAS A)
         // melting point(time)
-        string name;
-        public List<int> cubesOfIce = new List<int>();
+        public string name;
 
         // constructor (SPAWNER)
         public IceCube()

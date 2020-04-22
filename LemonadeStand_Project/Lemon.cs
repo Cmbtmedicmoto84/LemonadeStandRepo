@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Lemon
+    class Lemon : Item
     {
         // member variables (HAS A)
         public string name;

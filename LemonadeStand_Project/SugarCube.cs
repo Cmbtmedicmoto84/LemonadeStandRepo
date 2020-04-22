@@ -4,7 +4,7 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class SugarCube : Item
+    class SugarCube : Item
     {
         // member variables (HAS A)
         //quantity

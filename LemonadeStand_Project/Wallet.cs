@@ -4,34 +4,35 @@ using System.Text;
 
 namespace LemonadeStand_Project
 {
-    public class Wallet
+    class Wallet
     {
-        private double quantityOfMoney;
+        private double money;
+
 
         //properties
-        public double QuantityOfMoney
+        public double Money
         {
             get
             {
-                return quantityOfMoney;
+                return money;
             }
         }
 
         //constructor
         public Wallet()
         {
-            quantityOfMoney = 20.00;
+            money = 20.00;
         }
 
         //member methods
         public void PayMoneyForItems(double transactionAmount)
         {
-            quantityOfMoney -= transactionAmount;
+            money -= transactionAmount;
         }
 
         public void DisplayCurrentCashOnHand()
         {
-            Console.WriteLine("You have $" + quantityOfMoney + " available.");
+            Console.WriteLine("You have $" + money + " available.");
         }
     }
 }
