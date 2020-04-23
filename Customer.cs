@@ -9,7 +9,6 @@ namespace LemonadeStand_3DayStarter
     class Customer
     {
         // member variables (HAS A)
-        //place in game class????
         public bool isOnWalk;
         public bool isThirsty;
 

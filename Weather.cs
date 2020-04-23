@@ -18,7 +18,6 @@ namespace LemonadeStand_3DayStarter
 
 
         Random random = new Random();
-        internal int TempCheckOne;
 
 
         public int TempVariableOne

@@ -39,6 +39,7 @@ namespace LemonadeStand_3DayStarter
             player.RunPlayerVariables();
 
             date.TimeToPlay();
+            date.RunDate();
             customer.Walk();
             customer.Thirsty();
             customer.NotThirsty();
