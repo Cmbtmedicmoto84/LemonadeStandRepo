@@ -8,7 +8,7 @@ namespace LemonadeStand_Project
     {
         // member variables (HAS A)
         public string name;
-
+        public int quantity;
 
         // constructor (SPAWNER)
         public Item()

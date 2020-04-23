@@ -23,9 +23,9 @@ namespace LemonadeStand_Project
         // member methods (CAN DO)
         public void WeatherDecision()
         {
-            if (weather.TempCheckOne == 0 && weather.TempCheckOne <= 9 &&  forecast == "Raining" || forecast == "Cloudy" || forecast == "Windy" || forecast == "Overcast")
+            if (weather.WeatherCond == 0 && weather.WeatherCond == 5 && weather.WeatherCond == 6)
             {
-
+                
             }
         }
 
@@ -43,16 +43,7 @@ namespace LemonadeStand_Project
 
         }
 
-        //stuff to add possibly
-        // public int CheckWeather()
-    //    {
-    //        int weatherCheckRoll = random.Next(0, 20);
-    //        if(weatherCheckRoll <= 9)
-    //        {
-                
-    //        }
-    //        return weatherCheckRoll;
-    //    }
+        //stuff to add 
 
     //public void PurchaseCupOfLemonade()
     //{
@@ -69,23 +60,13 @@ namespace LemonadeStand_Project
     //    }
     //}
 
-    ////public void LeaveLemonadeStand()
+    ////public void LeaveLemonadeStand()  'use for customers on walk but dont buy'
     ////{
     ////    if (isInterestedInPurchase = !isInterestedInPurchase)
     ////    {
     ////        Console.WriteLine("The customer looked but did not buy.");
     ////    }
     ////}
-
-
-
-    //public void RunBehaviors()
-    //{
-    //    int custCheckOne = CheckWeather();
-    //    int custCheckTwo = CheckWeather();
-
-    //    //CompareCustomerBehavior(customersCrummyWeather, customersGoodWeather);
-    //}
 
 
 

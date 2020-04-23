@@ -11,11 +11,13 @@ namespace LemonadeStand_Project
         private int tempVariableTwo;
         private int tempCheckRoll;
         public List<string> forecastChoices;
+        private int weatherCondition;
         public string forecast;
         
 
         Random random = new Random();
         internal int TempCheckOne;
+        
 
         public int TempVariableOne
         {
@@ -36,6 +38,13 @@ namespace LemonadeStand_Project
             get
             {
                 return tempCheckRoll;
+            }
+        }
+        public int WeatherCond
+        {
+            get
+            {
+                return weatherCondition;
             }
         }
         
