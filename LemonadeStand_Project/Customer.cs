@@ -8,128 +8,45 @@ namespace LemonadeStand_Project
     class Customer
     {
         // member variables (HAS A)
-        private int customersGoodWeather;
-        private int customersCrummyWeather;
-        public int customerOne;
-        public int customerTwo;
-        public bool isCustomerAtStand;
-        public bool isInterestedInPurchase;
-        public bool isCustomerOneInterested;
-        public bool isCustomerTwoInterested;
-        Random random = new Random();
-
-        public int CustomersGoodWeather
-        {
-            get
-            {
-                return customersGoodWeather;
-            }
-        }
-        public int CustomersCrummyWeather
-        {
-            get
-            {
-                return customersCrummyWeather;
-            }
-        }
+        //place in game class????
+        public bool isOnWalk;
+        public bool isThirsty;
 
         // constructor (SPAWNER)
         public Customer()
         {
-            //call weather.temperature and similar forecast for comparison
-
+            isOnWalk = false;
+            isThirsty = false;
         }
 
-        public int CheckWeather()
+        //methods
+        public void Walk()
         {
-            int weatherCheckRoll = random.Next(0, 20);
-            return weatherCheckRoll;
+            isOnWalk = !isOnWalk;
         }
-
-        // member methods (CAN DO)
-        public void CompareCustomerBehavior(int custCheckOne, int custCheckTwo)
+        public void Thirsty()
         {
-            if (custCheckOne == 0 || custCheckOne <= 9)
+            if (isOnWalk == true)
             {
-                Console.WriteLine("I don't think todays temperatures are going to bring many people out for lemonade!");
-            }
-            else if (custCheckTwo >= 10)
-            {
-                Console.WriteLine("Todays temperatures should bring lots of customers!"); 
-            }
-
-        }
-
-        public void WalkToLemonadeStand()
-        {
-            if (isCustomerAtStand == !isCustomerAtStand)
-            {
-                Console.WriteLine("A customer has stopped at your stand!");
-            }
-            else
-            {
-                LeaveLemonadeStand();
-            }
-        }
-        public void PurchaseCupOfLemonade()
-        {
-            if(isInterestedInPurchase = !isInterestedInPurchase)
-            {
-                if (customerOne >= 55)
+                if (isThirsty != false)
                 {
-                    Console.WriteLine("The customer purchased a cup of lemonade!");
+                    NotThirsty();
                 }
-            }
-            else if (customerTwo < 55)
-            {
-                Console.WriteLine("The customer said it wasn't the best weather for cold lemonade and continued walking.");
+
+                isThirsty = !isThirsty;
             }
         }
-
-        public void LeaveLemonadeStand()
+        public void NotThirsty()
         {
-            //how to have customer leave after purchasing or not interested in purchasing?
-            if (isInterestedInPurchase = !isInterestedInPurchase)
+            //add dot notation for decision
+            if (isOnWalk == true)
             {
-                Console.WriteLine("The customer looked but did not buy.");
+                isThirsty = false;     //not on walk
+            }
+            else if (isOnWalk == false)
+            {
+                isThirsty = true;      //is on a walk and not thirsty
             }
         }
-
-
-
-        public void RunBehaviors()
-        {
-            int custCheckOne = CheckWeather();
-            int custCheckTwo = CheckWeather();
-
-            CompareCustomerBehavior(customersCrummyWeather, customersGoodWeather);
-        }
-
-
-
-
-        //part of saving txt file? member variable
-        //public string CustomerName { get { return name; } set { name = value; } }
-
-        // possible for saving txt file information?
-        //private bool Validate()
-        //{
-        //    Console.WriteLine("Validated");
-        //    return true;
-        //}
-
-        //public bool Save()
-        //{
-        //    Validate();
-        //    DBSetUp();
-        //    return true;
-        //}
-
-        //private bool DBSetUp()
-        //{
-        //    Console.WriteLine("DB Set up");
-        //    return true;
-        //}
-
     }
 }

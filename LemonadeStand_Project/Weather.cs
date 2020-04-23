@@ -9,10 +9,13 @@ namespace LemonadeStand_Project
         // member variables (HAS A)
         private int tempVariableOne;
         private int tempVariableTwo;
+        private int tempCheckRoll;
         public List<string> forecastChoices;
         public string forecast;
+        
 
         Random random = new Random();
+        internal int TempCheckOne;
 
         public int TempVariableOne
         {
@@ -28,13 +31,21 @@ namespace LemonadeStand_Project
                 return tempVariableTwo;
             }
         }
+        public int TempCheckRoll
+        {
+            get
+            {
+                return tempCheckRoll;
+            }
+        }
         
         // constructor (SPAWNER)
         public Weather()
         {
             forecastChoices = new List<string>() { "Sunny", "Cloudy", "Overcast", "Raining", "Windy", "Warm", "Humid" };
-            tempVariableOne = random.Next(71, 88);
-            tempVariableTwo = random.Next(89, 97);
+            tempVariableOne = random.Next(55, 68);
+            tempVariableTwo = random.Next(69, 97);
+            
         }
 
         // member methods (CAN DO)
@@ -55,12 +66,12 @@ namespace LemonadeStand_Project
         {
             if (tempCheckOne == 0 && tempCheckOne <=9 && forecast == "Raining" || forecast == "Cloudy" || forecast == "Windy" || forecast == "Overcast")
             {
-                Console.WriteLine("Todays temperature will be " + tempVariableOne + " degrees and " + forecast + "!");
+                Console.WriteLine("Todays temperature will be " + tempVariableOne + " degrees and " + forecast + "! We might not see many customers today.");
                 tempVariableOne ++;
             }
             else if (tempCheckTwo >= 10 && forecast == "Sunny" || forecast == "Warm" || forecast == "Humid")
             {
-                Console.WriteLine("Todays temperature is looking to be at " + tempVariableTwo + " degrees and " + forecast + "!!");
+                Console.WriteLine("Todays temperature is looking to be at " + tempVariableTwo + " degrees and " + forecast + "!! This weather should bring in the crowds!!!");
                 tempVariableTwo++;
             }
         }
@@ -77,6 +88,10 @@ namespace LemonadeStand_Project
         }
     }
 }
+
+
+
+
 
 
 

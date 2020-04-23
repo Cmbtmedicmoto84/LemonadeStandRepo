@@ -8,7 +8,7 @@ namespace LemonadeStand_Project
     {
         // member variables (HAS A)
         private int daysToPlay;
-        Weather weather = new Weather();
+        //Weather weather = new Weather();
         public List<string> currentDay;
 
         public int DaysToPlay
