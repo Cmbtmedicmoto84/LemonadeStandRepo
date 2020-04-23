@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace LemonadeStand_Project
+namespace LemonadeStand_3DayStarter
 {
     class Wallet
     {
         private double money;
 
-        //properties
         public double Money
         {
             get
@@ -17,18 +18,15 @@ namespace LemonadeStand_Project
             }
         }
 
-        //constructor
         public Wallet()
         {
             money = 20.00;
         }
 
-        //member methods
         public void PayMoneyForItems(double transactionAmount)
         {
             money -= transactionAmount;
         }
-
         public void DisplayCurrentCashOnHand()
         {
             Console.WriteLine("You have $" + money + " available.");

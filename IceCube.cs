@@ -1,19 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace LemonadeStand_Project
+namespace LemonadeStand_3DayStarter
 {
-    abstract class Item
+    class IceCube : Item
     {
         // member variables (HAS A)
-        public string name;
-        public int quantity;
 
         // constructor (SPAWNER)
-        public Item()
+        public IceCube()
         {
-
+            name = "ice cube";
         }
 
         // member methods (CAN DO)

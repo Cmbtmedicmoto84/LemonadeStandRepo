@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace LemonadeStand_Project
+namespace LemonadeStand_3DayStarter
 {
     class Weather
     {
@@ -13,11 +15,11 @@ namespace LemonadeStand_Project
         public List<string> forecastChoices;
         private int weatherCondition;
         public string forecast;
-        
+
 
         Random random = new Random();
         internal int TempCheckOne;
-        
+
 
         public int TempVariableOne
         {
@@ -47,14 +49,14 @@ namespace LemonadeStand_Project
                 return weatherCondition;
             }
         }
-        
+
         // constructor (SPAWNER)
         public Weather()
         {
             forecastChoices = new List<string>() { "Sunny", "Cloudy", "Overcast", "Raining", "Windy", "Warm", "Humid" };
             tempVariableOne = random.Next(55, 68);
             tempVariableTwo = random.Next(69, 97);
-            
+
         }
 
         // member methods (CAN DO)
@@ -73,10 +75,10 @@ namespace LemonadeStand_Project
 
         public void CompareVariableWeather(int tempCheckOne, int tempCheckTwo)
         {
-            if (tempCheckOne == 0 && tempCheckOne <=9 && forecast == "Raining" || forecast == "Cloudy" || forecast == "Windy" || forecast == "Overcast")
+            if (tempCheckOne == 0 && tempCheckOne <= 9 && forecast == "Raining" || forecast == "Cloudy" || forecast == "Windy" || forecast == "Overcast")
             {
                 Console.WriteLine("Todays temperature will be " + tempVariableOne + " degrees and " + forecast + "! We might not see many customers today.");
-                tempVariableOne ++;
+                tempVariableOne++;
             }
             else if (tempCheckTwo >= 10 && forecast == "Sunny" || forecast == "Warm" || forecast == "Humid")
             {
@@ -85,7 +87,7 @@ namespace LemonadeStand_Project
             }
         }
 
-        
+
 
         public void RunWeather()
         {
@@ -97,15 +99,3 @@ namespace LemonadeStand_Project
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

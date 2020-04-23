@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace LemonadeStand_Project
+namespace LemonadeStand_3DayStarter
 {
-    class SugarCube : Item
+    abstract class Item
     {
         // member variables (HAS A)
+        public string name;
+        public int quantity;
 
         // constructor (SPAWNER)
-        public SugarCube()
+        static Item()
         {
-            name = "sugar cube";
+            
         }
 
         // member methods (CAN DO)

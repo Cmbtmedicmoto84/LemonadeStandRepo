@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace LemonadeStand_Project
+namespace LemonadeStand_3DayStarter
 {
     static class UserInterface
     {
@@ -18,6 +20,7 @@ namespace LemonadeStand_Project
 
                 userInputIsAnInteger = Int32.TryParse(Console.ReadLine(), out quantityOfItem);
             }
+
             return quantityOfItem;
         }
     }

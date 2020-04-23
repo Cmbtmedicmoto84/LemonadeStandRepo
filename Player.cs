@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace LemonadeStand_Project
+namespace LemonadeStand_3DayStarter
 {
     class Player
     {
@@ -26,11 +28,5 @@ namespace LemonadeStand_Project
             wallet.DisplayCurrentCashOnHand();
             inventory.DisplayStartingInventory();
         }
-
-        
-
-        // make more lemonade
-        // choose lemonade recipe variations
-
     }
 }

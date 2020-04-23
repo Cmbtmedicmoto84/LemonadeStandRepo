@@ -1,17 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace LemonadeStand_Project
+namespace LemonadeStand_3DayStarter
 {
-    class Inventory : Item
+    class Inventory
     {
         // member variables (HAS A)
         public List<Lemon> lemons;
         private int MyLemonsStarting;
         public List<SugarCube> sugarCubes;
         private int MySugarCubesStarting;
-        public List<IceCube> iceCubes; 
+        public List<IceCube> iceCubes;
         private int MyIceCubesStarting;
         public List<Cup> cups;
         private int MyCupsStarting;
@@ -80,7 +82,7 @@ namespace LemonadeStand_Project
         // member methods (CAN DO)
         public void AddLemonsToRecipe(int numberOfLemons)
         {
-           
+
         }
     }
 }
