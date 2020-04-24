@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace LemonadeStand_3DayStarter
@@ -10,10 +11,9 @@ namespace LemonadeStand_3DayStarter
     {
         // member variables (HAS A)
         private int daysToPlay;
-        public List<string> dayOfWeek;
-        private string weekDays;
-        public int daysOfWeek;
-        private string days;
+        public List<string> daysOfWeek;
+        public int dayOfWeek;
+        //public string dayNames;
         //Date date = new Date();
 
         public int DaysToPlay
@@ -27,10 +27,12 @@ namespace LemonadeStand_3DayStarter
         // constructor (SPAWNER)
         public Date()
         {
-            dayOfWeek = new List<string>() { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-            daysOfWeek = 0;
             daysToPlay = 7;
-            
+        }
+        public Date(List<string> daysOfWeek, int dayOfWeek)
+        {
+            daysOfWeek = new List<string> { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
+            dayOfWeek = 0;            
         }
 
         // member methods (CAN DO)
@@ -39,55 +41,46 @@ namespace LemonadeStand_3DayStarter
             Console.WriteLine("You have " + daysToPlay + " days to make as much of a profit as you can!  GOOD LUCK!!");
         }
 
-        public int DaysOfWeek()
-        {
-            int daysOfWeek = dayOfWeek.Count;
-            days = dayOfWeek[daysOfWeek];
-            return daysOfWeek;
-        }
-
         public void DayToday()
         {
-            string[] weekDays = { "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday" };
-            if (daysOfWeek == 0)
+            if (dayOfWeek == 0)
             {
-                Console.WriteLine("Today is " + days);
-                daysOfWeek++;
+                Console.WriteLine("Today is " + daysOfWeek);
+                dayOfWeek++;
             }
-            else if(daysOfWeek == 1)
+            else if(dayOfWeek == 1)
             {
-                Console.WriteLine("Today is " + days);
-                daysOfWeek++;
+                Console.WriteLine("Today is " + daysOfWeek);
+                dayOfWeek++;
             }
-            else if (daysOfWeek == 2)
+            else if (dayOfWeek == 2)
             {
-                Console.WriteLine("Today is " + days);
-                daysOfWeek++;
+                Console.WriteLine("Today is " + daysOfWeek);
+                dayOfWeek++;
             }
-            else if (daysOfWeek == 3)
+            else if (dayOfWeek == 3)
             {
-                Console.WriteLine("Today is " + days);
-                daysOfWeek++;
+                Console.WriteLine("Today is " + daysOfWeek);
+                dayOfWeek++;
             }
-            else if (daysOfWeek == 4)
+            else if (dayOfWeek == 4)
             {
-                Console.WriteLine("Today is " + days);
-                daysOfWeek++;
+                Console.WriteLine("Today is " + daysOfWeek);
+                dayOfWeek++;
             }
-            else if (daysOfWeek == 5)
+            else if (dayOfWeek == 5)
             {
-                Console.WriteLine("Today is " + days);
-                daysOfWeek++;
+                Console.WriteLine("Today is " + daysOfWeek);
+                dayOfWeek++;
             }
-            else if (daysOfWeek == 6)
+            else
             {
-                Console.WriteLine("Today is " + days);
+                Console.WriteLine("Today is " + daysOfWeek);
             }
         }
 
         public void RunDate()
-        {
-            int weekDays = DaysOfWeek();
+        {   
             DayToday();
         }
     }
